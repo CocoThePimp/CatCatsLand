@@ -33,7 +33,24 @@
    font-weight: bold;
  }
 
+<<<<<<< HEAD
  /*** LOGIN FORM ***/
  #LoginForm{
   padding: 10%;
 }
+=======
+ .column50{
+   margin: 5% 7% 5% 7%;
+ }
+ .jumbotron{
+   width: 700px;
+   height: 450px;
+   box-shadow: 1px 1px 20px 2px #ac32e4;
+ }
+ .form-contact{
+   background-color:white;
+   color:#343b43;
+   font-size: 20px;
+   font-weight: bold;
+ }
+>>>>>>> e12b57a53388c0fb065e1d5c9a38f214196acfc8
