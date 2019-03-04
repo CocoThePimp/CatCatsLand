@@ -30,12 +30,12 @@
                  <% if current_user %>
                   <ul>
                     <li><a href="#">Mon espace perso</a></li>
-                    <li><a href="#">Déconnexion</a></li>
+                    <li><a href="<%= destroy_user_session_path%>">Déconnexion</a></li>
                   </ul>
                   <% else %>
                   <ul>
-                    <li><a href="#">Conexion</a></li>
-                    <li><a href="#">Inscription</a></li>
+                    <li><a href="<%= new_user_session_path %>">Connexion</a></li>
+                    <li><a href="<%= new_user_registration_path %>">Inscription</a></li>
                   </ul>
                    <% end %>
                 </div>

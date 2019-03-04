@@ -10,14 +10,15 @@
             <li class="nav-item mega-dropdown-toggle active"><a class="nav-link" href="index.html">Cat-Cats-Land</a>
             </li>
             <!-- Items-->
-            <li class="nav-item dropdown-toggle"><a class="nav-link" href="portfolio-style1-boxed.html">Produits</a>
+            <li class="nav-item dropdown-toggle"><a class="nav-link" href="portfolio-style1-boxed.html">Nos produits</a>
             </li>
             <% if current_user %>
             <!-- Account-->
             <li class="nav-item dropdown-toggle"><a class="nav-link" href="#">Mon compte</a>
             </li>
             <!-- Sign out-->
-            <li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="<%=destroy_user_session_path(current_user.id) %>">Déconnexion</a>
+            <li class="nav-item mega-dropdown-toggle">
+                <%= link_to "Se déconnecter",  destroy_user_session_path, method: :delete, class:"nav-link" %>
             </li>
             <% else %>
             <!-- Login-->
