@@ -1,1 +1,82 @@
-hello
+
+<!-- Page Title-->
+<div class="page-title d-flex" aria-label="Page title" style="background-image: url(img/page-title/shop-pattern.jpg);">
+  <div class="container text-left align-self-center">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><%= link_to "Accueil" %></li>
+        <li class="breadcrumb-item"><%= link_to "Magasin" %></li>
+      </ol>
+    </nav>
+    <h1 class="page-title-heading">Page Produit</h1>
+  </div>
+</div>
+
+<!-- Page Content-->
+<div class="container mb-2">
+  <div class="row">
+    <!-- Product Gallery-->
+    <div class="col-md-6 pb-5">
+      <div class="product-gallery"><span class="badge badge-danger text-md font-weight-normal">Sale</span>
+        <div class="product-carousel owl-carousel">
+          <a class="gallery-item" href=<%= @item.image_url%> data-fancybox="gallery1" data-hash="one">
+          
+            <img src=<%= @item.image_url%> alt="Product">
+          </a>
+        </div> 
+      </div>
+    </div>
+
+    <div class="col-md-6 pb-5">
+      <div class="product-meta"><i class="fe-icon-bookmark"></i><%= link_to @item.title%></div>
+      <h2 class="h3 font-weight-bold"><%= @item.title %></h2>
+        <h3 class="h4 font-weight-light">
+          $<%= @item.price %>
+        </h3>
+      <p class="text-muted"><%= @item.description %>
+        <a href='#details' class='scroll-to'>More info</a>
+      </p>
+      <div class="row mt-4"> 
+      </div>
+      <div class="row align-items-end pb-4">
+        <div class="col-sm-4">
+          <div class="form-group mb-0">
+            <label for="quantity">Quantity</label>
+            <select class="form-control" id="quantity">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+        </div>
+            <div class="col-sm-8">
+              <div class="pt-4 hidden-sm-up"></div>
+              <button class="btn btn-primary btn-block m-0" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="fe-icon-check-circle" data-toast-title="Product" data-toast-message="successfuly added to cart!"><i class="fe-icon-shopping-cart"></i> Add to Cart</button>
+            </div>
+          </div>
+          
+          <hr class="mb-2">
+          <div class="d-flex flex-wrap justify-content-between align-items-center">
+            <div class="mt-2 mb-2"> 
+            </div>
+          <div class="mt-2 mb-2"><span class="text-muted d-inline-block align-middle mb-2">Share:&nbsp;&nbsp;</span>
+            <div class="d-inline-block"><a class="social-btn sb-style-3 sb-facebook my-1" href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="socicon-facebook"></i></a><a class="social-btn sb-style-3 sb-twitter my-1" href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="socicon-twitter"></i></a><a class="social-btn sb-style-3 sb-instagram my-1" href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="socicon-instagram"></i></a><a class="social-btn sb-style-3 sb-google-plus my-1 mr-0" href="#" data-toggle="tooltip" data-placement="top" title="Google +"><i class="socicon-googleplus"></i></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Product Details-->
+  <div class="bg-secondary pt-5 pb-4" id="details">
+    <div class="container py-2">
+      <div class="row">
+        <div class="col-md-6">
+          <h3 class="h6">Description</h3>
+          <p class="mb-4 pb-2"> <%= @item.description %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

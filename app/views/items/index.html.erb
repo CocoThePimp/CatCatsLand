@@ -1,48 +1,47 @@
-<h1>Voilà</h1>
-<% @items.each do |item| %>
-<!-- Product Card -->
-<div class="product-card mx-auto">
-  
-  <div class="product-head d-flex justify-content-between align-items-center">
-    <span class="badge badge-danger">Sale</span>
-    <div class="rating-stars">
-      <i class="fe-icon-star active"></i>
-      <i class="fe-icon-star active"></i>
-      <i class="fe-icon-star active"></i>
-      <i class="fe-icon-star active"></i>
-      <i class="fe-icon-star"></i>
+
+
+
+
+<section class="container py-5 mb-4">
+  <h2 class="h4 block-title text-center pt-3">Nos chatons trop mignons</h2>
+
+  <div class="row pt-4">
+  <% @items.each do |item| %>
+    <!-- Product-->
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-30">
+      <!-- Product Card -->
+      <div class="product-card mx-auto mb-3">
+        <div class="product-head d-flex justify-content-between align-items-center">
+          <span class="badge badge-danger">Sale</span>
+          <div class="rating-stars">
+            <i class="fe-icon-star active"></i>
+            <i class="fe-icon-star active"></i>
+            <i class="fe-icon-star active"></i>
+            <i class="fe-icon-star active"></i>
+            <i class="fe-icon-star"></i>
+          </div>
+        </div>
+        <a class="product-thumb" href="#">
+          <img src= <%= item.image_url %> alt="Product Thumbnail"/>
+        </a>
+        <div class="product-card-body">
+          <span class="product-meta"><%= link_to item.title %></span>
+          <h5 class="product-title">
+            <%= link_to item.title %>
+          </h5>
+          <span class="product-price">$<%= item.price %></span>
+        </div>
+        <div class="product-buttons-wrap">
+          <div class="product-buttons">
+            <div class="product-button">
+              <a href="#" data-toast data-toast-position="topRight" data-toast-type="success" data-toast-icon="fe-icon-check-circle" data-toast-title="Product" data-toast-message="added to cart successfuly!">
+                <i class="fe-icon-shopping-cart"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  <% end %>
   </div>
-  <a class="product-thumb" href="#">
-    <img src= "<%= item.image_url %>" alt="Product Thumbnail"/>
-  </a>
-  <div class="product-card-body">
-    <a class="product-meta" href="#"><%= item.title %></a>
-    <h5 class="product-title">
-      <a href="#"><%= item.title %></a>
-    </h5>
-    <span class="product-price">
-     $<%= item.price %>
-    </span>
-  </div>
-  <div class="product-buttons-wrap">
-    <div class="product-buttons">
-      <div class="product-button">
-        <a href="#" data-toast data-toast-position="topRight" data-toast-type="info" data-toast-icon="fe-icon-help-circle" data-toast-title="Product" data-toast-message="added to your wishlist!">
-          <i class="fe-icon-heart"></i>
-        </a>
-      </div>
-      <div class="product-button">
-        <a href="#" data-toast data-toast-position="topRight" data-toast-type="info" data-toast-icon="fe-icon-help-circle" data-toast-title="Product" data-toast-message="added to comparison table!">
-          <i class="fe-icon-repeat"></i>
-        </a>
-      </div>
-      <div class="product-button">
-        <a href="#" data-toast data-toast-position="topRight" data-toast-type="success" data-toast-icon="fe-icon-check-circle" data-toast-title="Product" data-toast-message="added to cart successfuly!">
-          <i class="fe-icon-shopping-cart"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-<% end %>
+</section>
