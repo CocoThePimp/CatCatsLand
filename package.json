@@ -1,5 +1,9 @@
 {
   "name": "Cat_Cats_Land",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^4.29.6",
+    "webpack-dev-server": "^3.2.1"
+  }
 }

@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Cat-Cats-Land</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Produits</a>
+      </li>
+
+    <form class="form-inline my-2 my-lg-0">
+        <% if current_user %>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Mon compte
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Mon profil</a>
+          <a class="dropdown-item" href="#">Mes commandes</a>
+          <a class="dropdown-item" href="<%=destroy_user_session_path(current_user.id)%>">Déconnexion</a>
+        </div>
+      </li>
+      <% else %>
+      <li class="nav-item">
+        <a class="nav-link" href="<%= new_user_registration_path%>">M'inscrire</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<%= new_user_session_path %>">Me connecter</a>
+      </li>
+      <%end%>
+    </ul>
+      <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Mon panier</button>
+    </form>
+  </div>
+</nav>

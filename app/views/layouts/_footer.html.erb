@@ -1,0 +1,71 @@
+    <!-- Footer-->
+    <footer class="bg-dark pt-5">
+      <!-- First Row-->
+      <div class="container pt-2">
+        <div class="row">
+          <!-- Shop Departments-->
+          <div class="col-lg-3">
+            <div class="widget widget-light-skin mb-0">
+              <h4 class="widget-title">Menu</h4>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="widget widget-categories widget-light-skin">
+                  <ul>
+                    <li><a href="#">Produits</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Shop Departments-->
+          <div class="col-lg-3">
+            <div class="widget widget-light-skin mb-0">
+              <h4 class="widget-title">Espace Membre</h4>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="widget widget-categories widget-light-skin">
+                 <% if current_user %>
+                  <ul>
+                    <li><a href="#">Mon espace perso</a></li>
+                    <li><a href="#">Déconnexion</a></li>
+                  </ul>
+                  <% else %>
+                  <ul>
+                    <li><a href="#">Conexion</a></li>
+                    <li><a href="#">Inscription</a></li>
+                  </ul>
+                   <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- About Links-->
+          <div class="col-lg-3 col-sm-6">
+            <div class="widget widget-categories widget-light-skin">
+              <h4 class="widget-title">A Propos</h4>
+              <ul>
+                <li><a href="#">Cat Cats Land</a></li>
+                <li><a href="#">J'aime mon chat</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- About Links-->
+          <div class="col-lg-3 col-sm-6">
+            <div class="widget widget-categories widget-light-skin">
+              <h4 class="widget-title">Réseaux Sociaux</h4>
+              <ul>
+                <li><a href="https://twitter.com/cats"> <i class="fab fa-twitter-square"></i>Twitter</a></li>
+                <li><a href="https://www.facebook.com/HappyCatsOnline/"> <i class="fab fa-facebook-square fa-lg"></i>Facebook</a></li>
+              </ul>
+            </div>
+          </div> 
+        </div> 
+            <div row>
+              <div class="col-md 12 text-center">
+              <small class="signature">© 2019 THP #TeamStrasbourg</small>
+              </div>
+            </div>
+    </footer>
