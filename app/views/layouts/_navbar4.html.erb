@@ -2,7 +2,7 @@
     <!-- Navbar: Default-->
     <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
     <header class="navbar-wrapper">
-      <div class="d-table-cell align-middle pr-md-3"><a class="navbar-brand mr-1" href="index.html">Cats-Cats-Land</a></div>
+      <div class="d-table-cell align-middle pr-md-3"><a class="navbar-brand mr-1" href="<%= root_path %>">Cats-Cats-Land</a></div>
       <div class="d-table-cell w-100 align-middle pl-md-3 ">
         
         <div class="navbar justify-content-end justify-content-lg-between">
@@ -14,19 +14,18 @@
           <ul class="navbar-nav d-none d-lg-block">
           
             <!-- Home-->
-            <li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="<%=root_path%>"> Nos Produits</a>
+            <li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="<%=items_path%>"> Les produits</a>
 
             </li>
            
             <% if current_user %>
             <!-- Account-->
-            <li class="nav-item dropdown-toggle"><a class="nav-link" href="account-orders.html"> Mon espace</a>
+            <li class="nav-item dropdown-toggle"><a class="nav-link" href="#"> Mon espace</a>
               <ul class="dropdown-menu">
-                <li class="dropdown-item"><a href="account-password-recovery.html">Password Recovery</a></li>
-                <li class="dropdown-item"><a href="account-orders.html">Orders List</a></li>
-                <li class="dropdown-item"><a href="account-profile.html">Profile Settings</a></li>
-                <li class="dropdown-item"><a href="account-address.html">Contact / Shipping Address</a></li>
-                <li class="dropdown-item"><a href="account-wishlist.html">Wishlist</a></li>
+                <li class="dropdown-item"><a href="#">Mon profile</a></li>
+                <li class="dropdown-item"><a href="#">Mes commandes</a></li>
+                <li class="dropdown-item"><a href="#">Paramètres</a></li>
+                <li class="dropdown-item"><a href="#">Mes favoris</a></li>
               </ul>
             </li>
            
