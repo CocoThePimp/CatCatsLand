@@ -18,12 +18,9 @@
     <!-- Product Gallery-->
     <div class="col-md-6 pb-5">
       <div class="product-gallery"><span class="badge badge-danger text-md font-weight-normal">Sale</span>
-        <div class="product-carousel owl-carousel">
-          <a class="gallery-item" href=<%= @item.image_url%> data-fancybox="gallery1" data-hash="one">
-          
-            <img src=<%= @item.image_url%> alt="Product">
-          </a>
-        </div> 
+        
+        <%= image_tag  "cat_1.jpg", alt: "photo du chat" %>
+        
       </div>
     </div>
 
