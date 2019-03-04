@@ -22,7 +22,7 @@
           </div>
         </div>
         <a class="product-thumb" href="#">
-          <img src= <%= item.image_url %> alt="Product Thumbnail"/>
+           <%= image_tag "cat_1.jpg", alt: "photos de chat" %>
         </a>
         <div class="product-card-body">
           <span class="product-meta"><%= link_to item.title %></span>
@@ -43,5 +43,5 @@
       </div>
     </div>
   <% end %>
-  </div>
+</div>
 </section>
