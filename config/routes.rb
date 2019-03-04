@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   root to: "items#index"
   resources :items, only: [:show, :index]
 
+  get '/contact', to: 'home#index', as: :contact
+
 
 end
