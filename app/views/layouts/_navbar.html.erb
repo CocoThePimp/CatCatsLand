@@ -1,0 +1,40 @@
+<header class="navbar-wrapper navbar-boxed navbar-sticky">
+    
+          <!-- Search-->
+          <form class="search-box" method="get">
+            <div class="easy-autocomplete" style="width: 1135px;"><input type="text" id="site-search" placeholder="Type A or C to see suggestions" autocomplete="off"><div class="easy-autocomplete-container" id="eac-container-site-search"><ul></ul></div></div><span class="search-close"><i class="fe-icon-x"></i></span>
+          </form>
+          <!-- Main Menu-->
+          <ul class="navbar-nav d-none d-lg-block">
+            <!-- Brand-->
+            <li class="nav-item mega-dropdown-toggle active"><a class="nav-link" href="index.html">Cat-Cats-Land</a>
+            </li>
+            <!-- Items-->
+            <li class="nav-item dropdown-toggle"><a class="nav-link" href="portfolio-style1-boxed.html">Produits</a>
+            </li>
+            <% if current_user %>
+            <!-- Account-->
+            <li class="nav-item dropdown-toggle"><a class="nav-link" href="#">Mon compte</a>
+            </li>
+            <!-- Sign out-->
+            <li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="<%=destroy_user_session_path(current_user.id) %>">Déconnexion</a>
+            </li>
+            <% else %>
+            <!-- Login-->
+            <li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="<%= new_user_session_path %>">Connexion</a>
+            </li>
+            <!-- Sign up-->
+            <li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="<%= new_user_registration_path%>">Inscription</a>
+            </li>
+          </ul>
+            <% end %>
+        
+          <div class="">
+            <ul class="navbar-buttons d-inline-block align-middle mr-lg-2 d-flex justify-content-end">
+              <li class="d-block d-lg-none"><a href="#mobile-menu" data-toggle="offcanvas"><i class="fe-icon-menu"></i></a></li>
+              <li><a href="#" data-toggle="search"><i class="fe-icon-search"></i></a></li>
+              <li><a href="#shopping-cart" data-toggle="offcanvas"><i class="fe-icon-shopping-cart"></i></a><span class="badge badge-danger">3</span></li>
+            </ul><a class="btn btn-gradient ml-3 d-none d-xl-inline-block" href="https://themes.getbootstrap.com/product/createx-multipurpose-template-ui-kit/" target="_blank">Achète moi!</a>
+          </div>
+
+    </header>

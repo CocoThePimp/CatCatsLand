@@ -20,6 +20,15 @@
  *= require css/owl.carousel.min
  *= require css/socicon.min
 
-
-
  */
+
+ footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+ }
+
+ .signature{
+   color:#f5f5f5;
+   font-weight: bold;
+ }
