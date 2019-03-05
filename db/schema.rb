@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(version: 2019_03_05_100138) do
     t.datetime "updated_at", null: false
     t.index ["cart_id"], name: "index_join_table_cart_items_on_cart_id"
     t.index ["item_id"], name: "index_join_table_cart_items_on_item_id"
+  end
+
   create_table "order_contents", force: :cascade do |t|
     t.bigint "order_id"
     t.bigint "item_id"
