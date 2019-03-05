@@ -1,1 +1,33 @@
-<h1><%= @item.item.title %></h1>
+<div class="container pb-5 mb-2">
+     <!-- Cart Item-->
+     <% @selection.each do |selection|  %>
+     <div class="cart-item d-md-flex justify-content-between"><span class="remove-item"><i class="fe-icon-x"></i></span>
+       <div class="px-3 my-3"><a class="cart-item-product" href="shop-single.html">
+           <div class="cart-item-product-thumb"><%= image_tag 'cat_1.jpg'  %></div>
+           <div class="cart-item-product-info">
+             <h4 class="cart-item-product-title"><%= selection.item.title  %></h4></div></a></div>
+       <div class="px-3 my-3 text-center">
+         <div class="cart-item-label">Quantité</div>
+         <div class="count-input">
+           <select class="form-control">
+             <option>1</option>
+           </select>
+         </div>
+       </div>
+       <div class="px-3 my-3 text-center">
+         <div class="cart-item-label"><%= "Sous total"  %></div><span class="text-xl font-weight-medium"><%= selection.item.price %></span>
+       </div>
+     </div>
+      <%end%>
+
+     <!-- Total à payer-->
+     <div class="py-2"><span class="d-inline-block align-middle text-sm text-muted font-weight-medium text-uppercase mr-2">Total:</span><span class="d-inline-block align-middle text-xl font-weight-medium"><%= @total %></span>€</div>
+
+     <!-- Buttons-->
+     <hr class="my-2">
+     <div class="row pt-3 pb-5 mb-2">
+       <div class="col-sm-6 mb-3"><a class="btn btn-secondary btn-block" href="#"><i class="fe-icon-refresh-ccw"></i>&nbsp;Supprimer tout mon panier</a></div>
+       <div class="col-sm-6 mb-3"><a class="btn btn-primary btn-block" href="checkout-address.html"><i class="fe-icon-credit-card"></i>&nbsp;Paiement</a></div>
+     </div>
+
+</div>
