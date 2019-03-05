@@ -50,8 +50,11 @@
         </div>
             <div class="col-sm-8">
               <div class="pt-4 hidden-sm-up"></div>
-              <button class="btn btn-primary btn-block m-0" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="fe-icon-check-circle" data-toast-title="Product" data-toast-message="successfuly added to cart!"><i class="fe-icon-shopping-cart"></i> Ajouter au panier</button>
-            </div>
+              <%= button_to(carts_path(@item.id),data: {toast_type: "success", toast_position: "topRight", toast_icon: "fe-icon-check-circle", toast_title: "Product", toast_message: "successfuly added to cart!"}, class: "btn btn-primary btn-block m-0", method: "create") do %>
+                <i class="fe-icon-shopping-cart"></i> Ajouter au panier
+                <% end %>
+
+              </div>
           </div>
           
           <hr class="mb-2">
