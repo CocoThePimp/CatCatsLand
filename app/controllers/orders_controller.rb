@@ -3,19 +3,19 @@ class OrdersController < ApplicationController
   def show
   end
 
-  # def create
-  #   @order = current_order
-  #   @item = @order.order_items.new(item_params)
-  #   @order.save
-  #   session[:order_id] = @order.id
-  #   redirect_to products_path
-  # end
+  def create
+    @order = current_order
+    @item = @order.order_items.new(item_params)
+    @order.save
+    session[:order_id] = @order.id
+    redirect_to products_path
+  end
 
-  # private
+  private
 
-  # def item_params
-  #   params.require(:order_item).permit(:quantity, :product_id)
-  # end
+  def item_params
+    params.require(:order_item).permit(:quantity, :product_id)
+  end
 
 
 
