@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :items, only: [:show, :index, :destroy]
   resources :home, only: [:index], as: :contact
   resources :carts, except: [:show, :new]
+  resources :charges
+
 end
