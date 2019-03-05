@@ -2,13 +2,13 @@
      <div class="container text-left align-self-center">
        <nav aria-label="breadcrumb">
          <ol class="breadcrumb">
-           <li class="breadcrumb-item"><a href="index.html">Home</a>
+           <li class="breadcrumb-item"><a href="<%= root_path%>">Accueil</a>
            </li>
-           <li class="breadcrumb-item"><a href="shop-boxed-ls.html">Shop</a>
+           <li class="breadcrumb-item"><a href="<%= items_path%>">Les produits</a>
            </li>
          </ol>
        </nav>
-       <h1 class="page-title-heading">Panier</h1>
+       <h1 class="page-title-heading">Mon panier</h1>
      </div>
    </div>
 
@@ -18,7 +18,7 @@
      <div class="cart-item d-md-flex justify-content-between"><%= link_to(item_path(selection.item_id),action: "destroy", method: :delete, data: {confirm: "Es-tu sûr?"},  class: "remove-item") do %>
       <i class="fe-icon-x"></i>
       <% end %>
-       <div class="px-3 my-3"><a class="cart-item-product" href="shop-single.html">
+       <div class="px-3 my-3"><a class="cart-item-product" href="<%= item_path(selection.item_id)%>">
            <div class="cart-item-product-thumb"><%= image_tag 'cat_1.jpg'  %></div>
            <div class="cart-item-product-info">
              <h4 class="cart-item-product-title"><%= selection.item.title  %></h4></div></a></div>
