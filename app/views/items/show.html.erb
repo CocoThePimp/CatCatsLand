@@ -25,7 +25,9 @@
     </div>
 
     <div class="col-md-6 pb-5">
-      <div class="product-meta"><i class="far fa-bookmark fe-icon-bookmark"></i><%= link_to @item.title%></div>
+      <div class="product-meta">
+      <i class="far fa-bookmark"> <!--i class="far fa-bookmark fe-icon-bookmark"> -->
+      </i><%= link_to @item.title%></div>
       <h2 class="h3 font-weight-bold"><%= @item.title %></h2>
         <h3 class="h4 font-weight-light">
           <%= @item.price %> €
@@ -51,7 +53,7 @@
               <div class="pt-4 hidden-sm-up"></div>
               <%= link_to(carts_path(@item.id),data: {toast_type: "success", toast_position: "topRight", toast_icon: "fe-icon-check-circle", toast_title: "Product", toast_message: "successfuly added to cart!"}, class: "btn btn-primary btn-block m-0", method: "create") do %>
                <!-- <i class="fe-icon-shopping-cart"></i> -->
-                <i class="fas fe-icon-shopping-cart fa-shopping-cart"></i>Ajouter au panier
+                <i class="fas fa-shopping-cart"></i>Ajouter au panier
                 <% end %>
 
               </div>
@@ -62,7 +64,7 @@
             <div class="mt-2 mb-2"> 
             </div>
           <div class="mt-2 mb-2"><span class="text-muted d-inline-block align-middle mb-2">Partager:&nbsp;&nbsp;</span>
-            <div class="d-inline-block"><a class="social-btn sb-style-3 sb-facebook my-1" href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="socicon-facebook fab fa-facebook-f"></i></a><a class="social-btn sb-style-3 sb-twitter my-1" href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="socicon-twitter"></i></a><a class="social-btn sb-style-3 sb-instagram my-1" href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="socicon-instagram"></i></a><a class="social-btn sb-style-3 sb-google-plus my-1 mr-0" href="#" data-toggle="tooltip" data-placement="top" title="Google +"><i class="socicon-googleplus"></i></a></div>
+            <div class="d-inline-block"><a class="social-btn sb-style-3 sb-facebook my-1" href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fab fa-facebook-f"></i></a><a class="social-btn sb-style-3 sb-twitter my-1" href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="socicon-twitter"></i></a><a class="social-btn sb-style-3 sb-instagram my-1" href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="socicon-instagram"></i></a><a class="social-btn sb-style-3 sb-google-plus my-1 mr-0" href="#" data-toggle="tooltip" data-placement="top" title="Google +"><i class="socicon-googleplus"></i></a></div>
           </div>
         </div>
       </div>
