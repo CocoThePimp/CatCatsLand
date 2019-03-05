@@ -7,7 +7,7 @@ class CartsController < ApplicationController
   end
 
   def create
-    if current_user.cart.user_id != current_user.id
+    if current_user.cart == nil
       Cart.create(user_id: current_user.id)
     end
     puts "#" * 30
@@ -15,7 +15,7 @@ class CartsController < ApplicationController
     @item = Item.find(params[:format])
     puts @item 
     puts "lol"
-    @mix = JoinTableCartItem.new(cart_id: current_user.cart.id, item_id: @item.id)
+    @mix = JoinTableCartItem.new(cart: current_user.cart, item_id: @item.id)
     if @mix.save
       redirect_to items_path
     else
@@ -23,6 +23,9 @@ class CartsController < ApplicationController
     end
 
     def destroy
+      @selection = JoinTableCartItem.where(cart_id: current_user.cart.id)
+      @selection.destroy_all
+      redirect_to carts_path
     end
 
   end
