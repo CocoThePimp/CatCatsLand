@@ -27,8 +27,8 @@ class CartsController < ApplicationController
       puts "Branche"
       @item.destroy
       
-      redirect_to items_path
-      puts "Bizzare"
+      redirect_to carts_path
+      puts "Bizarre"
     end
 
   end
