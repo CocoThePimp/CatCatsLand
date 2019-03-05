@@ -3,7 +3,13 @@
      <% @selection.each do |selection|  %>
      <div class="cart-item d-md-flex justify-content-between"><span class="remove-item"><i class="fe-icon-x"></i></span>
        <div class="px-3 my-3"><a class="cart-item-product" href="shop-single.html">
-           <div class="cart-item-product-thumb"><%= image_tag 'cat_1.jpg'  %></div>
+           <div class="cart-item-product-thumb">
+            <%if item.cat_picture.attached?%>
+              <%= image_tag item.cat_picture, alt: "#{item.title}", class: "card-img" %>
+              <%else%>
+              <img src="<%= image_tag 'cat_1.jpg'  %>" class="card-img" alt="img-cat">
+              <% end %>
+          </div>
            <div class="cart-item-product-info">
              <h4 class="cart-item-product-title"><%= selection.item.title  %></h4></div></a></div>
        <div class="px-3 my-3 text-center">
