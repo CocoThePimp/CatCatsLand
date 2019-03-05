@@ -18,9 +18,12 @@
     <!-- Product Gallery-->
     <div class="col-md-6 pb-5">
       <div class="product-gallery"><span class="badge badge-success text-md font-weight-normal">En stock</span>
-        
-        <%= image_tag  "cat_1.jpg", alt: "photo du chat" %>
-        
+        <%if @item.image_url.attached?%>
+            <%= image_tag @item.image_url, alt: 'image url' %>
+          <%else%>
+            <%= image_tag  "cat_1.jpg", alt: "photo du chat" %>
+            <p>=== Il n'y a pas encore de photo lié à ce chat ===</p>
+          <%end%>
       </div>
     </div>
 
@@ -80,3 +83,9 @@
     </div>
   </div>
 </div>
+ <!-- User connected -->
+<h3>Admin, change la photo ?</h3>
+<%= form_tag item_photos_path(@item), multipart: true do %>
+  <%= file_field_tag :image_url %>
+  <%= submit_tag "mettre à jour" %>
+<% end %>
