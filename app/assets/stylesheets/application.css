@@ -61,3 +61,8 @@
   margin-bottom:5%;
   padding: 3%;
 }
+
+.pymtbutton{
+  display: flex;
+  justify-content: center;
+}
