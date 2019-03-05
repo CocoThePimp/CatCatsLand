@@ -15,10 +15,10 @@
             <i class="fe-icon-star active"></i>
             <i class="fe-icon-star active"></i>
             <i class="fe-icon-star"></i>-->
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
+            <i class="fas fa-star active"></i>
+            <i class="fas fa-star active"></i>
+            <i class="fas fa-star active"></i>
+            <i class="fas fa-star active"></i>
             <i class="far fa-star"></i>
           </div>
         </div>
@@ -38,13 +38,13 @@
             <div class="product-button">
               <%=  link_to(carts_path(item.id), data: {toast_position: "topRight" ,toast_type:"success" , toast_icon: "fe-icon-check-circle", toast_title: "Product" , toast_message: "added to cart successfuly!"}, method: "create") do %>
                 <!--<i class="fe-icon-shopping-cart"></i>-->
-         <i class="fas fa-shopping-cart"></i>
+         <i class="fas fe-icon-shopping-cart fa-shopping-cart"></i>
               <% end %>
             </div>
             <div class="product-button">
               <a href=<%= item_path(item.id)%>>
                 <!--<i class="fe-icon-arrow-right"></i>-->
-                <i class="fas fa-arrow-right"></i>
+                <i class="fas fe-icon-arrow-right fa-arrow-right"></i>
               </a>
             </div>
           </div>
