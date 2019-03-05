@@ -84,8 +84,10 @@
   </div>
 </div>
  <!-- User connected -->
+ <div>
 <h3>Admin, change la photo ?</h3>
 <%= form_tag item_photos_path(@item), multipart: true do %>
   <%= file_field_tag :image_url %>
   <%= submit_tag "mettre à jour" %>
 <% end %>
+</div>
