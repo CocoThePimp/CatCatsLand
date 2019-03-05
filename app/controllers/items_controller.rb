@@ -8,4 +8,12 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
+  def destroy
+    @item =  JoinTableCartItem.find_by(item_id: params[:id]) 
+    @item.destroy
+    
+    redirect_to items_path
+  end
+
+
 end

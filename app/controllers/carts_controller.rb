@@ -23,9 +23,12 @@ class CartsController < ApplicationController
     end
 
     def destroy
-      @selection = JoinTableCartItem.where(cart_id: current_user.cart.id)
-      @selection.destroy_all
-      redirect_to carts_path
+      @item =  Item.find(params[:id]) 
+      puts "Branche"
+      @item.destroy
+      
+      redirect_to items_path
+      puts "Bizzare"
     end
 
   end
