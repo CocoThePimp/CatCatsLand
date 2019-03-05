@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
   
   def show
+    #@current_user_email = User.find(params[:email]) 
   end
 
   def create
