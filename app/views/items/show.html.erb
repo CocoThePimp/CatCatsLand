@@ -50,7 +50,8 @@
             <div class="col-sm-8">
               <div class="pt-4 hidden-sm-up"></div>
               <%= link_to(carts_path(@item.id),data: {toast_type: "success", toast_position: "topRight", toast_icon: "fe-icon-check-circle", toast_title: "Product", toast_message: "successfuly added to cart!"}, class: "btn btn-primary btn-block m-0", method: "create") do %>
-                <i class="fe-icon-shopping-cart"></i> Ajouter au panier
+               <!-- <i class="fe-icon-shopping-cart"></i> -->
+                <i class="fas fa-shopping-cart"></i>Ajouter au panier
                 <% end %>
 
               </div>
