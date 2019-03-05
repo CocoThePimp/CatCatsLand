@@ -1,8 +1,7 @@
 <section>
 <div class="container container rounded box-shadow">
-  <div class="row" style="margin-bottom:10%;">
+  <div class="row" id= "RegisterForm">
     <div class="col-md-6 offset-md-3">
-      <br><br><br>
       <%= form_for resource, as: resource_name, url: registration_path(resource_name), html: { class: "form-signin mt-3" } do |f| %>
         <h1 class="h3 mb-3 font-weight-normal text-center">S'inscrire</h1>
         <%= devise_error_messages! %>
