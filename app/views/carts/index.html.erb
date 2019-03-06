@@ -56,13 +56,23 @@
         <div class="btn btn-primary btn-block">
           <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                  data-description="A month's subscription"
+                  data-description="Achat des photos de chaton"
                   data-amount=<%= @total * 100%>
                   data-locale="auto"></script>
+
+          <script>
+            $(function() {
+              $(".stripe-button-el").replaceWith('<button type="submit" class="btn btn-primary btn-block"><i class="fas fa-credit-card"></i>Paiement</button>');
+            });
+          </script>
+        
         </div>
+
+
         <% end %>
        </div>
       </div>
     </div>
     
-<%= link_to( orders_path(@total), method: "create", class: "btn btn-primary btn-block") do %><i class="fas fa-credit-card"></i><!--fe-icon-credit-card-->&nbsp;Paiement<% end %>
+<!--<%= link_to( orders_path(@total), method: "create", class: "btn btn-primary btn-block") do %><i class="fas fa-credit-card"></i><!--fe-icon-credit-card-->
+<!-- &nbsp;Paiement<% end %> -->
