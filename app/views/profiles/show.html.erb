@@ -23,45 +23,20 @@
             </div>
           </div>
           <div class="wizard">
-            <nav class="list-group list-group-flush"><a class="list-group-item active" href="account-orders.html">
+            <nav class="list-group list-group-flush"><%= link_to(profiles_path, remote: true, class: "list-group-item")  do %>
+                      <i class="fas fa-user text-muted"></i>Informations Profil
+                      <% end %>
                 <div class="d-flex justify-content-between align-items-center">
-                  <div><i class="fe-icon-user text-muted"></i>
-                    <div class="d-inline-block font-weight-medium text-uppercase" href="<%=profile_path%>">Informations Profile</div>
-                  </div>
+
                 </div></a><%=link_to(profiles_path, method: :post, class: "list-group-item", remote: true) do %>
-                <i class="fe-icon-shopping-bag mr-1 text-muted"></i>Mes Commande(s)
+                <i class="fas fa-shopping-bag text-muted"></i>Mes Commande(s)
                 <%end%>
                 </nav>
           </div>
         </div>
         <!-- Profile Settings-->
         <div class="col-lg-8 pb-5" id="tab">
-          <form class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="account-fn">Prénom</label>
-                <input class="form-control" type="text" id="account-fn" value=<%= @user.first_name %> disabled="">
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="account-ln">Nom</label>
-                <input class="form-control" type="text" id="account-ln" value=<%= @user.last_name %> disabled="">
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="account-email">Adresse E-mail </label>
-                <input class="form-control" type="email" id="account-email" value=<%= @user.email %> disabled="">
-              </div>
-            </div>
-            <div class="col-12">
-              <hr class="mt-2 mb-3">
-              <div class="d-flex flex-wrap justify-content-between align-items-center">
-                <%= link_to "Mettre à jour mon profil" ,edit_user_registration_path, class: "btn btn-primary" %>
-              </div>
-            </div>
-          </form>
+          <%= render 'users_info', user: @user %>
         </div>
         
       

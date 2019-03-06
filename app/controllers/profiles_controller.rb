@@ -1,13 +1,21 @@
 class ProfilesController < ApplicationController
   
+  def index
+    @user = current_user
+    respond_to do |format|
+      format.html {redirect_to profile_path(current_user.id)}
+      format.js 
+    end
+  end
+
   def show
-    @user=current_user
+    @user= current_user
   end
 
   def create
     respond_to do |format|
-
-      format.js
+      format.html {redirect_to profile_path(current_user.id)}
+      format.js 
     end
   end
 
