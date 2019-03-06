@@ -66,3 +66,7 @@
   display: flex;
   justify-content: center;
 }
+
+.stripe-button-el {
+  background-color: black;
+}
