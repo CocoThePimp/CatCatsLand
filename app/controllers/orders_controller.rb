@@ -2,30 +2,27 @@ class OrdersController < ApplicationController
 
   
   def create
-    @amount = @total
-  
-    customer = Stripe::Customer.create({
-      email: params[:stripeEmail],
-      source: params[:stripeToken],
-    })
-  
-    charge = Stripe::Charge.create({
-      customer: customer.id,
-      amount: @amount,
-      description: 'Rails Stripe customer',
-      currency: 'usd',
-    })
-
-  
-  rescue Stripe::CardError => e
-    flash[:error] = e.message
-    redirect_to new_charge_path
     
-    order_user
-
-    @order = Order.create(order_id: params[:order_id], amount: params[:amount])
-
-    end
+    @amount = params[:amount] * 100
+  
+  #   customer = Stripe::Customer.create({
+  #     email: params[:stripeEmail],
+  #     source: params[:stripeToken],
+  #   })
+  
+  #   charge = Stripe::Charge.create({
+  #     customer: customer.id,
+  #     amount: @amount,
+  #     description: 'Rails Stripe customer',
+  #     currency: 'eur',
+  #   })
+  
+  # rescue Stripe::CardError => e
+  #   flash[:error] = e.message
+  #   redirect_to new_charge_path
+  # end    
+  #     order_user
+  end
     
     
     

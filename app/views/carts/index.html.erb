@@ -41,29 +41,35 @@
 
      <!-- Buttons-->
       <div class="pymtbutton">
+<<<<<<< HEAD
        <div class="col-sm-6 mb-3"> 
        </div>
       </div>
 
       <%= form_tag(orders_path, class: "btn btn-primary btn-block") do %>
+=======
+       <div class="col-sm-6 mb-3">
+       <%= form_tag(orders_path, class: "btn btn-primary btn-block")  do %>
+>>>>>>> 303cb358e5669ede185edc420ec99e3b4c14fc9c
   <article>
     <% if flash[:error].present? %>
       <div id="error_explanation">
         <p><%= flash[:error] %></p>
       </div>
     <% end %>
-    <label class="amount", class="btn btn-primary btn-block">
-    
-      <span>Amount:€</span>
+    <label class="amount">
+    <%= hidden_field_tag 'amount', @total %>
     </label>
-    
   </article>
-<i class="fas fa-credit-card"></i>
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button btn btn-primary btn-block"
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-description="A month's subscription"
-          data-amount=""
+          data-amount=<%= @total * 100%>
           data-locale="auto"></script>
 <% end %>
+       </div>
+      </div>
 
 </div>
+<%= link_to( orders_path(@total), method: "create", class: "btn btn-primary btn-block") do %><i class="fas fa-credit-card"></i><!--fe-icon-credit-card-->&nbsp;Paiement<% end %>
