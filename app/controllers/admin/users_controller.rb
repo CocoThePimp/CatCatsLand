@@ -26,7 +26,8 @@ module Admin
     end
 
     def update
-      if @users.update(first_name: params[:first_name], last_name: params[:last_name], email: params[:email])
+      @user = User.find(params[:id])
+      if @user.update(first_name: params[:first_name], last_name: params[:last_name], email: params[:email])
         redirect_to({action: :index}, success: "L'utilisateur a bien été modifié")
       else 
         render "new"
