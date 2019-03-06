@@ -37,13 +37,13 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label for="account-fn">Prénom</label>
-                <input class="form-control" type="text" id="account-fn" value=<%= @user.first_name %> required="">
+                <input class="form-control" type="text" id="account-fn" value=<%= @user.first_name %> disabled="">
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label for="account-ln">Nom</label>
-                <input class="form-control" type="text" id="account-ln" value=<%= @user.last_name %> required="">
+                <input class="form-control" type="text" id="account-ln" value=<%= @user.last_name %> disabled="">
               </div>
             </div>
             <div class="col-md-6">
@@ -52,22 +52,10 @@
                 <input class="form-control" type="email" id="account-email" value=<%= @user.email %> disabled="">
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="account-pass">Nouveau mot de passe</label>
-                <input class="form-control" type="password" id="account-pass">
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="account-confirm-pass">Confirmer mot de passe</label>
-                <input class="form-control" type="password" id="account-confirm-pass">
-              </div>
-            </div>
             <div class="col-12">
               <hr class="mt-2 mb-3">
               <div class="d-flex flex-wrap justify-content-between align-items-center">
-                <button class="btn btn-primary" type="button" data-toast="" data-toast-position="topRight" data-toast-type="success" data-toast-icon="fe-icon-check-circle" data-toast-title="Success!" data-toast-message="Your profile updated successfuly.">Mettre à jour mon profil</button>
+                <%= link_to "Mettre à jour mon profil" ,edit_user_registration_path, class: "btn btn-primary" %>
               </div>
             </div>
           </form>
@@ -109,6 +97,6 @@
           </div>
         </div>
        <!-- End Order-->
-       
+
       </div>
     </div>
