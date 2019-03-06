@@ -3,19 +3,19 @@ class OrdersController < ApplicationController
   
   def create
     
-    # @amount = params[:amount] * 100
+    @amount = params[:amount].to_i
   
-    # customer = Stripe::Customer.create({
-    #   email: params[:stripeEmail],
-    #   source: params[:stripeToken],
-    # })
+    customer = Stripe::Customer.create({
+      email: params[:stripeEmail],
+      source: params[:stripeToken],
+    })
   
-    # charge = Stripe::Charge.create({
-    #   customer: customer.id,
-    #   amount: @amount,
-    #   description: 'Rails Stripe customer',
-    #   currency: 'eur',
-    # })
+    charge = Stripe::Charge.create({
+      customer: customer.id,
+      amount: @amount * 100,
+      description: 'Rails Stripe customer',
+      currency: 'eur',
+    })
   
   
       order_user
@@ -33,7 +33,7 @@ class OrdersController < ApplicationController
       OrderContent.create(item_id: object.item_id, order_id: @order.id)
       object.destroy
     end
-    redirect_to carts_path
+    redirect_to profile_path(current_user)
   end
 
 end
