@@ -1,25 +1,42 @@
 class OrdersController < ApplicationController
-  
-  def show
-  end
 
+  
   def create
-    @cart = Cart.find(params[:id])
-    @cart_items = Join_table_cart_items.where(item_id: @cart)
     
-    @order = current_order
-    @item = @order.order_items.new(item_params)
-    @order.save
-    session[:order_id] = @order.id
-    redirect_to products_path
+    @amount = params[:amount] * 100
+  
+    customer = Stripe::Customer.create({
+      email: params[:stripeEmail],
+      source: params[:stripeToken],
+    })
+  
+    charge = Stripe::Charge.create({
+      customer: customer.id,
+      amount: @amount,
+      description: 'Rails Stripe customer',
+      currency: 'eur',
+    })
+  
+  rescue Stripe::CardError => e
+    flash[:error] = e.message
+    redirect_to new_charge_path
+   
+      order_user
   end
+    
+    
+    
 
   private
 
-  def item_params
-    params.require(:order_item).permit(:quantity, :product_id)
+  def order_user
+    @object = JoinTableCartItem.where(cart: current_user.cart)
+    @order = Order.create(user: current_user)
+    @object.each do |object|
+      OrderContent.create(item_id: object.item_id, order_id: @order.id)
+      object.destroy
+    end
+    redirect_to carts_path
   end
-
-
 
 end
