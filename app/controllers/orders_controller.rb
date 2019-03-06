@@ -12,8 +12,27 @@ class OrdersController < ApplicationController
     # @object.each do |object|
     #   @order = OrderContent.new(item_id: @object)
     #   @order.save
-      order_user
-    end
+    # Amount in cents
+    @amount = params[:amount] * 100
+  
+  #   customer = Stripe::Customer.create({
+  #     email: params[:stripeEmail],
+  #     source: params[:stripeToken],
+  #   })
+  
+  #   charge = Stripe::Charge.create({
+  #     customer: customer.id,
+  #     amount: @amount,
+  #     description: 'Rails Stripe customer',
+  #     currency: 'eur',
+  #   })
+  
+  # rescue Stripe::CardError => e
+  #   flash[:error] = e.message
+  #   redirect_to new_charge_path
+  # end    
+  #     order_user
+  end
     
     
     
