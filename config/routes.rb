@@ -9,4 +9,11 @@ Rails.application.routes.draw do
   resources :orders, only: [:create, :show]
   resources :charges
   resources :profiles, only: [:show, :update]
+
+  namespace :admin do
+    resources :users 
+    resources :items
+    resources :orders
+  end
+
 end
