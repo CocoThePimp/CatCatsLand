@@ -37,8 +37,24 @@
      </div>
       <%end%>
 
+      <!-- Si le panier est vide -->
+      <% if @total === 0%>
+       <div class="px-3 my-3 text-center">
+          <h2> Le panier est vide. </h2>
+       </div>
+      <% end %>
+
      <!-- Total à payer-->
      <div class="py-2"><span class="d-inline-block align-middle text-sm text-muted font-weight-medium text-uppercase mr-2">Total:</span><span class="d-inline-block align-middle text-xl font-weight-medium"><%= @total %></span>€</div>
+
+    <% if @total === 0 %>
+      <div class="pymtbutton">
+       <div class="col-sm-6 mb-3">
+        <a class="btn btn-secondary btn-block" href="<%= items_path %>">Continuer mes achats</a>
+        </div>
+      </div>
+   
+    <% else %>
 
      <!-- Buttons-->
       <div class="pymtbutton">
@@ -68,11 +84,13 @@
           </script>
         
         </div>
-
-
         <% end %>
        </div>
       </div>
+      <!-- fin de stripe -->
+      <%end%>
+
+
     </div>
     
 
