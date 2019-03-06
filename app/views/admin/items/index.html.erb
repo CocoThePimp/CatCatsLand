@@ -40,3 +40,20 @@
 </div>
 </div>
 </section>
+
+        <!-- Total items-->
+        <p class="container py-5 mb-4">
+                <strong>Nombre total de produits: <%= @items.count %></strong>
+        </p>
+
+    <!-- Bouton créer un produit-->
+        <div class="container">
+          <div class="container-fluid">
+            <div class="row"> 
+              <div class= "col-sm-4"></div>
+            <%=link_to 'Créer un nouveau produit', new_admin_item_path, class: "btn btn-primary text-center" %>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
