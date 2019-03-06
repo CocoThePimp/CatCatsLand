@@ -4,6 +4,13 @@ class ProfilesController < ApplicationController
     @user=current_user
   end
 
+  def create
+    respond_to do |format|
+
+      format.js
+    end
+  end
+
   def update
     @user=current_user
     if @user.update_attributes(params[:user])

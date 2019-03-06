@@ -28,11 +28,14 @@
                   <div><i class="fe-icon-user text-muted"></i>
                     <div class="d-inline-block font-weight-medium text-uppercase" href="<%=profile_path%>">Informations Profile</div>
                   </div>
-                </div></a><a class="list-group-item" href="#"><i class="fe-icon-shopping-bag mr-1 text-muted"></i>Mes Commande(s)</a></nav>
+                </div></a><%=link_to(profiles_path, method: :post, class: "list-group-item", remote: true) do %>
+                <i class="fe-icon-shopping-bag mr-1 text-muted"></i>Mes Commande(s)
+                <%end%>
+                </nav>
           </div>
         </div>
         <!-- Profile Settings-->
-        <div class="col-lg-8 pb-5">
+        <div class="col-lg-8 pb-5" id="tab">
           <form class="row">
             <div class="col-md-6">
               <div class="form-group">
@@ -61,42 +64,7 @@
           </form>
         </div>
         
-        <!-- Order-->
-        <div class="col-lg-8 pb-5">
-          <div class="d-flex justify-content-end pb-3">
-            <div class="form-inline">
-              <label class="text-muted mr-3" for="order-sort">Trier mes commandes</label>
-              <select class="form-control" id="order-sort">
-                <option>Toutes</option>
-                <option>Livré</option>
-                <option>En cours</option>
-                <option>Retardé</option>
-                <option>Annulé</option>
-              </select>
-            </div>
-          </div>
-          <div class="table-responsive">
-            <table class="table table-hover mb-0">
-              <thead>
-                <tr>
-                  <th>Commande #</th>
-                  <th>Date de la commande</th>
-                  <th>Statut</th>
-                  <th>Total</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><a class="navi-link" href="#order-details" data-toggle="modal">78A643CD409</a></td>
-                  <td>August 08, 2017</td>
-                  <td><span class="badge badge-danger m-0">Canceled</span></td>
-                  <td><span>$760.50</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-       <!-- End Order-->
+      
 
       </div>
     </div>
