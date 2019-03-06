@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe OrdersController, type: :controller do
 
+<<<<<<< HEAD
   describe "GET #show" do
     it "returns http success" do
       get :show
@@ -16,4 +17,6 @@ RSpec.describe OrdersController, type: :controller do
     end
   end
 
+=======
+>>>>>>> origin/order_feature
 end
