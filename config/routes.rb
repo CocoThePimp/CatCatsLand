@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   resources :home, only: [:index], as: :contact
   resources :carts, except: [:show, :new]
   resources :charges
+  resources :order, only: [:show, :create]
+
 
 end
