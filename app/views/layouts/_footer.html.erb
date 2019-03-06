@@ -29,7 +29,7 @@
                 <div class="widget widget-categories widget-light-skin">
                  <% if current_user %>
                   <ul>
-                    <li><a href="#">Mon espace perso</a></li>
+                    <li><%= link_to "Mon espace", profile_path(current_user)%></li>
                     <li><a href="<%= destroy_user_session_path%>">Déconnexion</a></li>
                   </ul>
                   <% else %>
