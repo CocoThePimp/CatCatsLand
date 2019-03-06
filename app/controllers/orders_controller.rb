@@ -21,8 +21,6 @@ class OrdersController < ApplicationController
       order_user
   end
     
-    
-    
 
   private
 
