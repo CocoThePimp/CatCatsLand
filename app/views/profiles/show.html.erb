@@ -23,12 +23,12 @@
             </div>
           </div>
           <div class="wizard">
-            <nav class="list-group list-group-flush"><%= link_to(profiles_path, remote: true, class: "list-group-item")  do %>
+            <nav class="list-group list-group-flush"><%= link_to(profile_path, remote: true, class: "list-group-item")  do %>
                       <i class="fas fa-user text-muted"></i>Informations Profil
                       <% end %>
                 <div class="d-flex justify-content-between align-items-center">
 
-                </div></a><%=link_to(profiles_path, method: :post, class: "list-group-item", remote: true) do %>
+                </div></a><%=link_to(profile_path, method: :post, class: "list-group-item", remote: true) do %>
                 <i class="fas fa-shopping-bag text-muted"></i>Mes Commande(s)
                 <%end%>
                 </nav>
