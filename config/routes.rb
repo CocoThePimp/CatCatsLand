@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :carts, except: [:show, :new]
   resources :orders, only: [:create, :show]
   resources :charges
-  resources :profiles, only: [:show, :update]
+  resources :profiles, only: [:show, :update,  :create, :index]
 
   namespace :admin do
     resources :users 
