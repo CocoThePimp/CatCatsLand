@@ -41,7 +41,7 @@
 
      <!-- Buttons-->
       <div class="pymtbutton">
-       <div class="col-sm-6 mb-3"><a class="btn btn-primary btn-block" href="checkout-address.html"><i class="fas fa-credit-card"></i><!--fe-icon-credit-card-->&nbsp;Paiement</a></div>
+       <div class="col-sm-6 mb-3"> <%= link_to( orders_path, method: "create", class: "btn btn-primary btn-block") do %><i class="fas fa-credit-card"></i><!--fe-icon-credit-card-->&nbsp;Paiement<% end %></div>
       </div>
 
 </div>
