@@ -41,7 +41,29 @@
 
      <!-- Buttons-->
       <div class="pymtbutton">
-       <div class="col-sm-6 mb-3"> <%= link_to( orders_path, method: "create", class: "btn btn-primary btn-block") do %><i class="fas fa-credit-card"></i><!--fe-icon-credit-card-->&nbsp;Paiement<% end %></div>
+       <div class="col-sm-6 mb-3"> 
+       </div>
       </div>
+
+      <%= form_tag(orders_path, class: "btn btn-primary btn-block") do %>
+  <article>
+    <% if flash[:error].present? %>
+      <div id="error_explanation">
+        <p><%= flash[:error] %></p>
+      </div>
+    <% end %>
+    <label class="amount", class="btn btn-primary btn-block">
+    
+      <span>Amount:€</span>
+    </label>
+    
+  </article>
+<i class="fas fa-credit-card"></i>
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button btn btn-primary btn-block"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="A month's subscription"
+          data-amount=""
+          data-locale="auto"></script>
+<% end %>
 
 </div>
