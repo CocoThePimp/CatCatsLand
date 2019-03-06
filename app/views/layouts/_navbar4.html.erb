@@ -20,9 +20,9 @@
            
             <% if current_user %>
             <!-- Account-->
-            <li class="nav-item dropdown-toggle"><a class="nav-link" href="#"> Mon espace</a>
+            <li class="nav-item dropdown-toggle"><%= link_to "Mon espace", profile_path(current_user)%>
               <ul class="dropdown-menu">
-                <li class="dropdown-item"><a href="#">Mon profile</a></li>
+                <li class="dropdown-item"><%= link_to "Mon profile", profile_path(current_user)%></li>
                 <li class="dropdown-item"><a href="#">Mes commandes</a></li>
                 <li class="dropdown-item"><a href="#">Paramètres</a></li>
                 <li class="dropdown-item"><a href="#">Mes favoris</a></li>
