@@ -43,10 +43,11 @@
               <% if current_user %>
               <li> <%= link_to(carts_path, data: {toggle: "offcanvas"}) do %>
                 <i class="fas fa-shopping-cart"></i>
-                <span class="badge badge-danger"><!--<% if current_user.cart.items.count > 0 %> <%= current_user.cart.items.count %><%end%><% end %>--></span>
+                <span class="badge badge-danger"></span>
+               <% end %>
+               <%end%>
               </li>
-              <% end %>
-              <% end %>
+            
               
               </ul><a class="btn btn-gradient ml-3 d-none d-xl-inline-block" href="<%= new_user_session_path %>" >Mon compte</a>
           </div>
