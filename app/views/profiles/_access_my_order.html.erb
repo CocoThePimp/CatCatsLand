@@ -22,14 +22,16 @@
           <th>Total</th>
         </tr>
       </thead>
+      <% current_user.orders.each do |order| %>
       <tbody>
         <tr>
-          <td><a class="navi-link" href="#order-details" data-toggle="modal">78A643CD409</a></td>
-          <td>August 08, 2017</td>
+          <td><a class="navi-link" href="#order-details" data-toggle="modal"><%= order.id %></a></td>
+          <td><%= order.created_at.strftime("Payé le %m/%d/%Y") %></td>
           <td><span class="badge badge-danger m-0">Canceled</span></td>
-          <td><span>$760.50</span></td>
+          <td><span><%=  order.amount %>€</span></td>
         </tr>
       </tbody>
+      <% end %>
     </table>
   </div>
 </div>
