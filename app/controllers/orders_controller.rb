@@ -4,6 +4,9 @@ class OrdersController < ApplicationController
   end
 
   def create
+    @cart = Cart.find(params[:id])
+    @cart_items = Join_table_cart_items.where(item_id: @cart)
+    
     @order = current_order
     @item = @order.order_items.new(item_params)
     @order.save

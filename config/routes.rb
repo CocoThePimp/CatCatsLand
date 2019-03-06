@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resources :carts, except: [:show, :new]
   resources :charges
   resources :order, only: [:show, :create]
+
+
 end
