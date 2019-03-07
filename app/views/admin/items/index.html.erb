@@ -30,7 +30,13 @@
               <td><%=item.id%></td>
               <td><%=item.title%></td>
               <td><%=item.description%></td>
-              <td><%=item.image_url%></td>
+              <td>
+              <%if item.catpic.attached?%>
+                  <%= image_tag item.catpic %>
+                <%else%>
+                  <%= image_tag "cat_1.jpg", alt: "photos de chat" %>
+                <%end%>     
+              </td>
               <td><%=link_to 'Editer', edit_admin_item_path(item.id) %></td>
               <td><%=link_to 'Supprimer', admin_item_path(item.id), method: :delete %></td>
             </tr>

@@ -47,7 +47,12 @@
                   <label> Photo </label>
                 </div>
                 <div class= "col-md-6">
-                  <p><%= text_field_tag 'image_url', @item.image_url %></p>
+                  <%if @item.catpic.attached?%>
+                      <%= image_tag @item.catpic, alt: 'photo du chat' %>
+                    <%else%>
+                      <p>=== Il n'y a pas encore de photo du produit  ===</p>
+                    <%end%>
+                    </div>
                 </div>                                                        
             </div>
 
@@ -64,3 +69,13 @@
         </div>
     </div>
 
+    <div class="container">
+      <h1 class= "h4 block-title text-center pt-3">Modifier la photo du chat ?</h1>
+        <div class="container-fluid">
+                    <%= form_tag admin_item_catpics_path(@item), multipart: true do %>
+                    <div class="form-group">
+                      <%= file_field_tag :catpic, class: "form-control" %>
+                      <%= submit_tag "mettre à jour", class: "btn btn-secondary text-center" %>
+                    <% end %>
+        </div>
+    </div>
