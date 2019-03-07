@@ -4,6 +4,15 @@ class ItemsController < ApplicationController
 
   def index 
     @items = Item.all
+
+    
+      #--- Mailer User ---
+      NotificationMailer.send_order_email(current_user.email).deliver
+  
+      #--- Mailer Admin ---
+      NotificationMailer.send_confirmation_email(current_user.email).deliver
+  
+    
   end
 
   def show
