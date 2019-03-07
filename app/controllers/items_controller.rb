@@ -1,11 +1,14 @@
 class ItemsController < ApplicationController
 
+
+
   def index 
     @items = Item.all
   end
 
   def show
     @item = Item.find(params[:id])
+
   end
 
   def destroy
@@ -14,6 +17,8 @@ class ItemsController < ApplicationController
     
     redirect_to carts_path
   end
+
+ 
 
 
 end

@@ -3,6 +3,7 @@ module Admin
   class OrdersController < ApplicationController
 
     before_action :set_orders, only: [:update, :edit, :destroy ]
+    
 
     def index 
       @orders = Order.all
@@ -31,6 +32,7 @@ module Admin
       @order = Order.find(params[:id])
     end
 
+  
   end
 
 end

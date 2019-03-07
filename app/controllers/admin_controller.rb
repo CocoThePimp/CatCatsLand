@@ -1,9 +1,8 @@
 class AdminController < ApplicationController
-  before_action :authenticate_user!,  only: [:index]
-  before_action :check_if_admin,  only: [:index]
+  before_action :is_admin?
 
   def index
-    @admin = User.all
+    @admins = User.where(:all, :conditions => {:is_admin => true})
   end
 
   def show 
@@ -21,15 +20,6 @@ class AdminController < ApplicationController
 
   def destroy 
     
-  end
-  
-  private 
-
-  def check_if_admin
-    unless current_user.is_admin
-      flash[:notice] = "Accès interdit, tu n'es pas administrateur"
-      redirect_to events_path
-    end
   end
 
 end

@@ -1,5 +1,7 @@
 class ProfilesController < ApplicationController
+
   
+
   def index
     @user = current_user
     respond_to do |format|
@@ -31,6 +33,9 @@ class ProfilesController < ApplicationController
       render 'devise/registration/edit'
     end
   end
+
+  
+  
 
 end
 

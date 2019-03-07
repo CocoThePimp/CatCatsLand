@@ -3,7 +3,7 @@ module Admin
   class ItemsController < ApplicationController
 
     before_action :set_items, only: [:update, :edit, :destroy ]
-
+    
     def index 
       @items = Item.all
     end
@@ -27,7 +27,7 @@ module Admin
 
     def update
       @item = Item.find(params[:id])
-      if @item.update(title: params[:title], description: params[:description], price: params[:price], image_url: params[:image_url])
+      if @item.update(title: params[:title], description: params[:description], price: params[:price], catpic: params[:catpic])
         redirect_to({action: :index}, success: "Le produit a bien été modifié")
       else 
         render "edit"
@@ -45,6 +45,10 @@ module Admin
       @item = Item.find(params[:id])
     end
 
+    private
+    def item_params
+      params.require(:item).permit(:title, :description, :price, :image_url, :catpic)
+    end
   end
 
 end
