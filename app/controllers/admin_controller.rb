@@ -3,7 +3,7 @@ class AdminController < ApplicationController
   before_action :check_if_admin,  only: [:index]
 
   def index
-    @admin = User.all
+    @admins = User.where(:all, :conditions => {:is_admin => true})
   end
 
   def show 
