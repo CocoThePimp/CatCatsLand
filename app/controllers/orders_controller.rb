@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  require 'mailjet'
 
   
   def create
@@ -20,7 +21,7 @@ class OrdersController < ApplicationController
   rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to new_charge_path
-   
+      sendgrid
       order_user
   end
     
@@ -38,5 +39,14 @@ class OrdersController < ApplicationController
     end
     redirect_to carts_path
   end
+
+
+
+  def sendgrid
+    @user = @current_user.email
+    Notification_mailer.send_order_email(@user).deliver
+
+  end 
+
 
 end
