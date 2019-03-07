@@ -4,8 +4,10 @@ class NotificationMailer < ApplicationMailer
 
 
 
-  def send_order_email(user)
+  def send_order_email(user, order)
     @user = user
+    @order = order
+    @liste = OrderContent.where(order: @order)
     attachment_def
     mail( :to => @user,
     :subject => 'Votre commande est arrivée!'
@@ -20,7 +22,9 @@ class NotificationMailer < ApplicationMailer
   end
 
   def attachment_def
-    attachments['cat_1.jpg'] = Base64.encode64('https://cat-cats-land.herokuapp.com/assets/cat_1-9742b1df7db28173032be6f0900494a610904f4918abbb14ddc35c48429face6.jpg')
+    @liste.each do |order|
+
+    attachments['catpic'] = Base64.encode64('cat_1.jpg')
   end
 
 end

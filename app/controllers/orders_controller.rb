@@ -40,7 +40,7 @@ class OrdersController < ApplicationController
 
   def sendgrid
     #--- Mailer User ---
-    NotificationMailer.send_order_email(current_user.email).deliver
+    NotificationMailer.send_order_email(current_user.email, @order).deliver
 
     #--- Mailer Admin ---
     NotificationMailer.send_confirmation_email('AdminEmailThpStras@yopmail.com').deliver
