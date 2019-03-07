@@ -32,14 +32,18 @@ class OrdersController < ApplicationController
       OrderContent.create(item_id: object.item_id, order_id: @order.id)
       object.destroy
     end
+    sendgrid
     redirect_to profiles_path
   end
 
 
 
   def sendgrid
-    @user = @current_user.email
-    Notification_mailer.send_order_email(@user).deliver
+    #--- Mailer User ---
+    NotificationMailer.send_order_email(current_user.email).deliver
+
+    #--- Mailer Admin ---
+    NotificationMailer.send_confirmation_email('AdminEmailThpStras@yopmail.com').deliver
 
   end 
 
