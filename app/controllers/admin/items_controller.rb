@@ -47,7 +47,7 @@ module Admin
     end
 
     def is_admin?
-      if signed_in? ? current_user.is_admin : true
+      if authenticate_user! ? current_user.is_admin? : true
         flash.now[:success] = "Accès admin autorisé"
       else
         flash.now[:alert] = "Accès admin nonautorisé"
