@@ -2,8 +2,8 @@ class OrdersController < ApplicationController
 
   
   def create
-    
-    @amount = params[:amount].to_i
+    @cart = Cart.find_by(user: current_user)
+    @amount = params[:amount].to_f
   
     @customer = Stripe::Customer.create({
       email: params[:stripeEmail],
@@ -12,7 +12,7 @@ class OrdersController < ApplicationController
   
     charge = Stripe::Charge.create({
       customer: @customer.id,
-      amount: @amount * 100,
+      amount: (@amount * 100).to_i,
       description: 'Rails Stripe customer',
       currency: 'eur',
     })
@@ -25,8 +25,8 @@ class OrdersController < ApplicationController
   private
 
   def order_user
-    @object = JoinTableCartItem.where(cart: current_user.cart)
-    @order = Order.create(user: current_user, stripe_customer_id: @customer.id, amount: params[:amount])
+    @object = JoinTableCartItem.where(cart: @cart)
+    @order = Order.create(user: current_user, stripe_customer_id: @customer.id, amount: @amount)
     @object.each do |object|
       OrderContent.create(item_id: object.item_id, order_id: @order.id)
       object.destroy
