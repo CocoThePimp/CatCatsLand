@@ -1,26 +1,14 @@
-# README
+![alt text](https://image.noelshack.com/fichiers/2019/10/4/1551977329-facebook-cover-photo-2.png)
+
+<div align="center">
+#THP #TeamStrasbourg
+#### Vous présente
+#Cat Cats Land !
+</div>
+
+<div align="center">
+![alt text](https://image.noelshack.com/fichiers/2019/10/4/1551977403-pinterest-profile-image.png)
 
 # https://cat-cats-land.herokuapp.com/
+</div>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
