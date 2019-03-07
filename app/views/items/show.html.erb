@@ -18,9 +18,11 @@
     <!-- Product Gallery-->
     <div class="col-md-6 pb-5">
       <div class="product-gallery"><span class="badge badge-success text-md font-weight-normal">En stock</span>
-        
-        <%= image_tag  "cat_1.jpg", alt: "photo du chat" %>
-        
+        <%if @item.catpic.attached?%>
+          <%= image_tag @item.catpic %>
+          <%else%>
+          <%= image_tag "cat_1.jpg", alt: "photos de chat" %>
+          <%end%>
       </div>
     </div>
 

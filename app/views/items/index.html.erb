@@ -23,7 +23,11 @@
           </div>
         </div>
         <span class="product-thumb">
+          <%if item.catpic.attached?%>
+          <%= image_tag item.catpic %>
+          <%else%>
           <%= image_tag "cat_1.jpg", alt: "photos de chat" %>
+          <%end%>
         </span>
         <div class="product-card-body">
           <span class="product-meta"><%= link_to item.title, item %></span>

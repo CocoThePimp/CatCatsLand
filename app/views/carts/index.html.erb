@@ -75,7 +75,8 @@
                   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
                   data-description="Achat des photos de chaton"
                   data-amount=<%= @total * 100%>
-                  data-locale="auto"></script>
+                  data-locale="auto"
+                  data-currency="eur"></script>
         </div>
         <% end %>
        </div>

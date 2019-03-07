@@ -3,8 +3,7 @@ module Admin
   class ItemsController < ApplicationController
 
     before_action :set_items, only: [:update, :edit, :destroy ]
-    before_action :is_admin?, only: [:index]
-
+    
     def index 
       @items = Item.all
     end
@@ -28,7 +27,7 @@ module Admin
 
     def update
       @item = Item.find(params[:id])
-      if @item.update(title: params[:title], description: params[:description], price: params[:price], image_url: params[:image_url])
+      if @item.update(title: params[:title], description: params[:description], price: params[:price], catpic: params[:catpic])
         redirect_to({action: :index}, success: "Le produit a bien été modifié")
       else 
         render "edit"
@@ -46,15 +45,10 @@ module Admin
       @item = Item.find(params[:id])
     end
 
-    def is_admin?
-      if current_user.is_admin === true
-        flash.now[:success] = "Accès admin autorisé"
-      else
-        flash.now[:alert] = "Accès admin nonautorisé"
-        redirect_to items_path
-      end
+    private
+    def item_params
+      params.require(:item).permit(:title, :description, :price, :image_url, :catpic)
     end
-
   end
 
 end
