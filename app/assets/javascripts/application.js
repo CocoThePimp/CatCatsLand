@@ -33,8 +33,6 @@
 //= require js/parallax-scroll.min
 //= require js/popper.min
 
-// $(function() {
-//   $(".stripe-button-el").replaceWith('<button type="submit" class="btn btn-primary btn-block"><i class="fas fa-credit-card"></i>Paiement</button>');
-// });
-
-// document.getElementsByClassName("stripe-button-el")[0].style.display = 'none';
+$(function() {
+  $(".stripe-button-el").replaceWith('<button type="submit" class="btn btn-primary btn-block"><i class="fas fa-credit-card"></i> Paiement</button>');
+});
