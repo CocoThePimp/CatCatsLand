@@ -25,23 +25,27 @@
                 <li class="dropdown-item"><%= link_to "Mon profile", profile_path(current_user)%></li>
                 <li class="dropdown-item"><a href="#">Mes commandes</a></li>
                 <li class="dropdown-item"><a href="<%= edit_user_registration_path %>">Paramètres</a></li>
-                <li class="dropdown-item"><a href="#">Mes favoris</a></li>
               </ul>
             </li>
-           
-            <!-- Components-->
-            <li class="nav-item">
-            <%= link_to "Se déconnecter",  destroy_user_session_path, method: :delete, class:"nav-link" %></li>
-           <% end%>
           </ul>
         
           <div>
 
           <ul class="navbar-buttons d-inline-block align-middle mr-lg-2">
               <li class="d-block d-lg-none"><a href="#mobile-menu" data-toggle="offcanvas"><i class="fe-icon-menu"></i></a></li>
-              <li><a href="#" data-toggle="search"><i class="fe-icon-search"></i></a></li>
-              <li><a href="<%=carts_path %>" data-toggle="offcanvas"><!--<i class="fe-icon-shopping-cart"></i>--> <i class="fas fa-shopping-cart"></i></a><span class="badge badge-danger">3</span></li>
-            </ul><a class="btn btn-gradient ml-3 d-none d-xl-inline-block" href="<%= new_user_session_path %>" >Mon compte</a>
+              <li> <%= link_to(carts_path, data: {toggle: "offcanvas"}) do %>
+                <i class="fas fa-shopping-cart"></i>
+                <span class="badge badge-danger"></span>
+               <% end %>
+               <%end%>
+              </li>
+          </ul>
+          <% if current_user%>
+          <!-- Components-->
+            <%= link_to "Se déconnecter",  destroy_user_session_path, method: :delete, class:"btn btn-gradient ml-3 d-none d-xl-inline-block" %></li>
+          <%else%>
+            <a class="btn btn-gradient ml-3 d-none d-xl-inline-block" href="<%= new_user_session_path %>" >Me connecter</a>
+          <%end%>
           </div>
         </div>
       </div>
