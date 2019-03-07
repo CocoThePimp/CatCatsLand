@@ -1,26 +1,26 @@
-# README
+![logo_teamstras](https://user-images.githubusercontent.com/43214794/53975952-4aad6e80-4106-11e9-8771-faf25161916c.png)
 
-# https://cat-cats-land.herokuapp.com/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<h1 align="center"> ⭐️ THP #TeamStrasbourg ⭐️ </h1>
+<h4 align="center"> Vous présente </h4>
+<h1 align="center"> >^.^< Cat Cats Land ! >^.^< </h1>
 
-Things you may want to cover:
+<div style="text-align:center">![logo_catcatsland](https://user-images.githubusercontent.com/43214794/53976084-95c78180-4106-11e9-8010-77510106d4c9.png)</div>
 
-* Ruby version
+<h2 align="center"> =^..^=  https://cat-cats-land.herokuapp.com/  =^..^= </h2>
 
-* System dependencies
+<h1 align="center"> L'équipe THP #TeamStrasbourg </h1>
 
-* Configuration
+<h1 align="center">
+| <img src="https://user-images.githubusercontent.com/43214794/53977957-6d418680-410a-11e9-8905-7c4d7f32a778.png" width="70">  | <img src="https://user-images.githubusercontent.com/43214794/53977958-6d418680-410a-11e9-9479-42791badc20e.png" width="70">  | <img src="https://user-images.githubusercontent.com/43214794/53977959-6d418680-410a-11e9-97b9-c792e4c7bd1c.png" width="70">  | <img src="https://user-images.githubusercontent.com/43214794/53977960-6d418680-410a-11e9-92ec-68d6427b6d89.png" width="70">  | <img src="https://user-images.githubusercontent.com/43214794/53977961-6d418680-410a-11e9-9b68-cebe18858ef1.png" width="70">  |
+</h1>
 
-* Database creation
+<p>Notre lead développeur</p>
+<img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" width="70" height="70" />
 
-* Database initialization
+<p>... Quand on push sur Heroku</p>
+<img src="https://media.giphy.com/media/Nm8ZPAGOwZUQM/giphy.gif" width="70" height="70" />
 
-* How to run the test suite
+<p>... Soyez gentil avec nous!</p>
+<img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" width="70" height="70" />
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

@@ -28,7 +28,7 @@ module Admin
 
     def update
       @user = User.find(params[:id])
-      if @user.update(first_name: params[:first_name], last_name: params[:last_name], email: params[:email])
+      if @user.update(first_name: params[:first_name], last_name: params[:last_name], email: params[:email], is_admin: params[:is_admin])
         redirect_to({action: :index}, success: "L'utilisateur a bien été modifié")
       else 
         render "new"
@@ -44,6 +44,10 @@ module Admin
 
     def set_users
       @users = User.find(params[:id])
+    end
+
+    def users_params
+      params.require(:user).permit(:first_name, :last_name, :email, :is_admin)
     end
 
   end

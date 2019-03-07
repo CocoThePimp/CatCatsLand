@@ -17,6 +17,7 @@ class CartsController < ApplicationController
     @cart = Cart.find_by(user: current_user)
     @mix = JoinTableCartItem.new(cart_id: @cart.id, item_id: @item.id)
     if @mix.save
+      flash[:success] = "La photo a bien été ajoutée au panier"
       redirect_to items_path
     else
       redirect_to root_path
