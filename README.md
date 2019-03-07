@@ -16,8 +16,10 @@
 <img src="https://user-images.githubusercontent.com/43214794/53977957-6d418680-410a-11e9-8905-7c4d7f32a778.png" width="100">   <img src="https://user-images.githubusercontent.com/43214794/53977958-6d418680-410a-11e9-9479-42791badc20e.png" width="100">   <img src="https://user-images.githubusercontent.com/43214794/53977959-6d418680-410a-11e9-97b9-c792e4c7bd1c.png" width="100">   <img src="https://user-images.githubusercontent.com/43214794/53977960-6d418680-410a-11e9-92ec-68d6427b6d89.png" width="100">   <img src="https://user-images.githubusercontent.com/43214794/53977961-6d418680-410a-11e9-9b68-cebe18858ef1.png" width="100">  
 </h1>
 
-<p>Notre lead développeur     ... Quand on push sur Heroku      ... Soyez gentil avec nous!</p>   
-<img src="https://media.giphy.com/media/7NoNw4pMNTvgc/giphy.gif" width="100" height="100" />      <img src="https://media.giphy.com/media/Nm8ZPAGOwZUQM/giphy.gif" width="100" height="100" />      <img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" width="100" height="100" />
+Notre lead développeur | ... Quand on push sur Heroku | ... Soyez gentil avec nous!
+--- | --- | ---
+<img src="https://media.giphy.com/media/7NoNw4pMNTvgc/giphy.gif" width="100" height="100" /> | <img src="https://media.giphy.com/media/Nm8ZPAGOwZUQM/giphy.gif" width="100" height="100" /> | <img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" width="100" height="100" />
+
 
 <h4>Tu peux payer avec stripe</h4>
 <h4>Tu peux recevoir des mails</h4>
