@@ -5,7 +5,7 @@
 <h4 align="center"> Vous présente </h4>
 <h1 align="center"> >^.^< Cat Cats Land ! >^.^< </h1>
 
-<h1 align="center">![logo_catcatsland](https://user-images.githubusercontent.com/43214794/53976084-95c78180-4106-11e9-8010-77510106d4c9.png)</h1>
+<div style="text-align:center">![logo_catcatsland](https://user-images.githubusercontent.com/43214794/53976084-95c78180-4106-11e9-8010-77510106d4c9.png)</div>
 
 <h2 align="center"> =^..^=  https://cat-cats-land.herokuapp.com/  =^..^= </h2>
 
