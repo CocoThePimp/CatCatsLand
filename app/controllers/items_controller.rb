@@ -10,7 +10,7 @@ class ItemsController < ApplicationController
     puts"email user envoyé"
 
     #--- Mailer Admin ---
-    #NotificationMailer.send_confirmation_email('emailDeAdmin@lol.com').deliver
+    #NotificationMailer.send_confirmation_email('AdminEmailThpStras@yopmail.com').deliver
     #puts"email admin envoyé"
   end
 

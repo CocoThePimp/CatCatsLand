@@ -17,6 +17,6 @@ module CatCatsLand
     # the framework and any gems in your application.
     config.assets.paths << Rails.root.join('vendor', 'fonts')
     config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
-    #config.action_mailer.delivery_method = :mailjet
+    config.action_mailer.default_url_options = {host: "https://cat-cats-land.herokuapp.com/"}
   end
 end
