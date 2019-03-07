@@ -5,7 +5,8 @@ class Item < ApplicationRecord
   validates :title, presence: true
   validates :price, presence: true
   validates :description, length: { in: 20..100 }
-
   has_many :join_table_cart_items
   has_many :carts, through: :join_table_cart_items
+
+  has_one_attached :catpic
 end
