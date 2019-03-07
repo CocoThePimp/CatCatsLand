@@ -17,7 +17,17 @@
             <li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="<%=items_path%>"> Les produits</a>
 
             </li>
-           
+           <% if is_admin? %>
+            <!-- Admin Account-->
+            <li class="nav-item dropdown-toggle"><a class="nav-link" href="<%=admin_users_path%>"> Espace admin</a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-item"><%= link_to "Utilisateurs", admin_users_path%></li>
+                <li class="dropdown-item"><a href="<%= admin_orders_path %>">Commandes</a></li>
+                <li class="dropdown-item"><a href="<%= admin_items_path %>">Produits</a></li>
+              </ul>
+            </li>
+            <%end%>
+
             <% if current_user %>
             <!-- Account-->
             <li class="nav-item dropdown-toggle"><a class="nav-link" href="<%=profile_path(current_user)%>"> Mon espace perso</a>
@@ -27,6 +37,7 @@
                 <li class="dropdown-item"><a href="<%= edit_user_registration_path %>">Paramètres</a></li>
               </ul>
             </li>
+
           </ul>
         
           <div>

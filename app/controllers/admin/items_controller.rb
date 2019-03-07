@@ -3,6 +3,7 @@ module Admin
   class ItemsController < ApplicationController
 
     before_action :set_items, only: [:update, :edit, :destroy ]
+    before_action :is_admin?, only: [:index]
 
     def index 
       @items = Item.all
@@ -43,6 +44,15 @@ module Admin
 
     def set_items
       @item = Item.find(params[:id])
+    end
+
+    def is_admin?
+      if current_user.is_admin === true
+        flash.now[:success] = "Accès admin autorisé"
+      else
+        flash.now[:alert] = "Accès admin nonautorisé"
+        redirect_to items_path
+      end
     end
 
   end

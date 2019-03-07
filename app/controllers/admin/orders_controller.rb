@@ -3,6 +3,7 @@ module Admin
   class OrdersController < ApplicationController
 
     before_action :set_orders, only: [:update, :edit, :destroy ]
+    before_action :is_admin?, only: [:index]
 
     def index 
       @orders = Order.all
@@ -31,6 +32,14 @@ module Admin
       @order = Order.find(params[:id])
     end
 
+    def is_admin?
+      if authenticate_user! ? current_user.is_admin? : true
+        flash.now[:success] = "Accès admin autorisé"
+      else
+        flash.now[:alert] = "Accès admin non autorisé"
+        redirect_to items_path
+      end
+    end
   end
 
 end
