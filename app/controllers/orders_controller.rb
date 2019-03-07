@@ -31,7 +31,7 @@ class OrdersController < ApplicationController
       OrderContent.create(item_id: object.item_id, order_id: @order.id)
       object.destroy
     end
-    redirect_to profile_path(current_user)
+    redirect_to profiles_path
   end
 
 end
