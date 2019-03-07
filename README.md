@@ -1,3 +1,5 @@
+<center>
+
 ![logo_teamstras](https://user-images.githubusercontent.com/43214794/53975952-4aad6e80-4106-11e9-8771-faf25161916c.png)
 
 
@@ -17,9 +19,10 @@
 </h1>
 
 Notre lead développeur | ... Quand on push sur Heroku | ... Soyez gentil avec nous!
---- | --- | ---
+:---: | :---: | :---:
 <img src="https://media.giphy.com/media/7NoNw4pMNTvgc/giphy.gif" width="100" height="100" /> | <img src="https://media.giphy.com/media/Nm8ZPAGOwZUQM/giphy.gif" width="100" height="100" /> | <img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" width="100" height="100" />
 
+</center>
 
 <h4>Tu peux payer avec stripe</h4>
 <h4>Tu peux recevoir des mails</h4>
