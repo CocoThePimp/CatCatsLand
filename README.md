@@ -1,13 +1,13 @@
-![alt text](https://www.noelshack.com/2019-10-4-1551977329-facebook-cover-photo-2.png)
+![logo_teamstras](https://user-images.githubusercontent.com/43214794/53975952-4aad6e80-4106-11e9-8771-faf25161916c.png)
 
 <div align="center">
-#THP #TeamStrasbourg
+# THP #TeamStrasbourg
 #### Vous présente
-#Cat Cats Land !
+# Cat Cats Land !
 </div>
 
 
-![alt text](https://www.noelshack.com/2019-10-4-1551977403-pinterest-profile-image.png)
+![logo_catcatsland](https://user-images.githubusercontent.com/43214794/53976084-95c78180-4106-11e9-8010-77510106d4c9.png)
 
 # https://cat-cats-land.herokuapp.com/
 
