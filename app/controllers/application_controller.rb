@@ -1,3 +1,4 @@
 class ApplicationController < ActionController::Base
-  inclide ApplicationHelper
+  helper_method :signed_in?, :is_admin?
+  include ProfilesHelper
 end

@@ -3,7 +3,7 @@ module Admin
   class UsersController < ApplicationController
 
     before_action :set_users, only: [:update, :edit, :destroy ]
-    before_action :is_admin?, only: [:index]
+    before_action :test_admin, only: [:index]
 
     def index 
       @users = User.all
@@ -46,8 +46,8 @@ module Admin
       @users = User.find(params[:id])
     end
 
-    def is_admin?
-      if authenticate_user! ? current_user.is_admin : true
+    def test_admin
+      if is_admin?
         flash.now[:success] = "Accès admin autorisé"
       else
         flash.now[:alert] = "Accès admin non autorisé"
