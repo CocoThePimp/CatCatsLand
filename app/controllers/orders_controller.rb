@@ -3,7 +3,7 @@ class OrdersController < ApplicationController
   
   def create
     @cart = Cart.find_by(user: current_user)
-    @amount = params[:amount].to_i
+    @amount = params[:amount].to_f
   
     @customer = Stripe::Customer.create({
       email: params[:stripeEmail],
@@ -12,14 +12,14 @@ class OrdersController < ApplicationController
   
     charge = Stripe::Charge.create({
       customer: @customer.id,
-      amount: @amount * 100,
+      amount: (@amount * 100).to_i,
       description: 'Rails Stripe customer',
-      currency: 'eur',
+      currency: 'eur'
     })
-  
-  
       order_user
   end
+
+
     
 
   private

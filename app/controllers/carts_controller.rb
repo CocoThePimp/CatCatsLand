@@ -27,7 +27,7 @@ class CartsController < ApplicationController
       @item =  Item.find(params[:id]) 
       puts "Branche"
       @item.destroy
-      
+      flash[:danger] = "Article supprimé du panier"
       redirect_to carts_path
       puts "Bizarre"
     end

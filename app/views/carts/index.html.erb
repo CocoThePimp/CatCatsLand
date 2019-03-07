@@ -16,7 +16,7 @@
 <div class="container pb-5 mb-2">
      <!-- Cart Item-->
      <% @selection.each do |selection|  %>
-     <div class="cart-item d-md-flex justify-content-between"><a><%= link_to(item_path(selection.item_id),action: "destroy", method: :delete, data: {confirm: "Es-tu sûr?"},  class: "remove-item") do %>
+     <div class="cart-item d-md-flex justify-content-between"><a><%= link_to item_path(selection.item_id),action: "destroy", method: :delete, data: {confirm: "Es-tu sûr?"},  class: "remove-item" do %>
       <i class="fas fa-times"></i></a> <!--fe-icon-x-->
       <% end %>
        <div class="px-3 my-3"><a class="cart-item-product" href="<%= item_path(selection.item_id)%>">
