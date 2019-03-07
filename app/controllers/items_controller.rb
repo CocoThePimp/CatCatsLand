@@ -4,14 +4,10 @@ class ItemsController < ApplicationController
     @items = Item.all
 
     #--- Mailer User ---
-    @user = current_user.email
-    puts "ceci est user 1 : #{@user}"
-    NotificationMailer.send_order_email(@user).deliver
-    puts"email user envoyé"
+    NotificationMailer.send_order_email(current_user.email).deliver
 
     #--- Mailer Admin ---
-    #NotificationMailer.send_confirmation_email('AdminEmailThpStras@yopmail.com').deliver
-    #puts"email admin envoyé"
+    NotificationMailer.send_confirmation_email('AdminEmailThpStras@yopmail.com').deliver
   end
 
   def show
