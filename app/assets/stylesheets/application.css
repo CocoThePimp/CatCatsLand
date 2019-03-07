@@ -37,6 +37,13 @@
    font-weight: bold;
  }
 
+ .prez{
+  color:#f5f5f5;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 13px;
+}
+
  /*** LOGIN FORM ***/
  #LoginForm{
   padding: 10%;
