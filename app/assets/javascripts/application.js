@@ -12,7 +12,6 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require_tree .
 
 //= require js/bootstrap.min
 //= require js/card.min
@@ -32,6 +31,8 @@
 //= require js/owl.carousel.min
 //= require js/parallax-scroll.min
 //= require js/popper.min
+//= require_tree .
+
 
 $(function() {
   $(".stripe-button-el").replaceWith('<button type="submit" class="btn btn-primary btn-block"><i class="fas fa-credit-card"></i> Paiement</button>');
