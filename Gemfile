@@ -8,6 +8,10 @@ gem 'dotenv-rails'
 gem 'devise'
 gem 'stripe'
 
+gem 'mailjet'
+gem 'letter_opener'
+gem 'mail'
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

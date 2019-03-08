@@ -74,9 +74,16 @@
           <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
                   data-description="Achat des photos de chaton"
-                  data-amount=<%= @total * 100%>
+                  data-amount="<%= @total * 100%>"
                   data-locale="auto"
                   data-currency="eur"></script>
+
+          <script>
+            $(function() {
+              $(".stripe-button-el").replaceWith('<button type="submit" class="btn btn-primary btn-block"><i class="fas fa-credit-card"></i>Paiement</button>');
+            });
+          </script>
+        
         </div>
         <% end %>
        </div>
