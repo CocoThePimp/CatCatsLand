@@ -9,7 +9,7 @@ gem 'devise'
 gem 'stripe'
 
 gem 'mailjet'
-gem 'letter_opener'
+
 gem 'mail'
 
 

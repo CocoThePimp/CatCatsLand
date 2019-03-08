@@ -63,4 +63,5 @@ Rails.application.configure do
   #Déselectionner la ligne ci-dessous pour ne pas envoyer le mail for real
   #config.action_mailer.delivery_method = :letter_opener
   config.action_mailer.perform_deliveries = true
+  config.action_mailer.delivery_method = :sendmail
 end
