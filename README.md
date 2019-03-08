@@ -12,7 +12,7 @@
 </h1>
 
 <h2 align="center"> =^..^=  https://cat-cats-land.herokuapp.com/  =^..^= </h2>
-<h2 align="center"> https://cat-cats-prod.herokuapp.com/ </h2>
+
 
 <h1 align="center"> L'équipe THP #TeamStrasbourg </h1>
 
