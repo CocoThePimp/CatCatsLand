@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-
+  before_action :authenticate_user!
   def create
     @cart = Cart.find_by(user: current_user)
     @amount = params[:amount].to_f
@@ -16,6 +16,7 @@ class OrdersController < ApplicationController
       currency: 'eur'
     })
       order_user
+      order_send(@order)
   end
 
     
@@ -31,19 +32,15 @@ class OrdersController < ApplicationController
     end
     redirect_to profiles_path
     flash[:succeess]= "Merci de votre achat. Vous receverez un mail très prochainement."
-    sendgrid
+  end
+
+  def order_send(order)
+    NotificationMailer.send_order_email(@order,@order.user).deliver_now
+    NotificationMailer.send_confirmation_email(@order.items,@order.user).deliver_now
   end
 
 
 
-  def sendgrid
-    #--- Mailer User ---
-    NotificationMailer.send_order_email(current_user.email).deliver_now
-
-    #--- Mailer Admin ---
-    NotificationMailer.send_confirmation_email(current_user.email).deliver_now
-
-  end 
 
 
 end

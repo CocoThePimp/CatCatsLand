@@ -7,6 +7,9 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.delivery_method = :sendmail
+
   # Do not eager load code on boot.
   config.eager_load = false
 
@@ -62,7 +65,10 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   #Déselectionner la ligne ci-dessous pour ne pas envoyer le mail for real
-  #config.action_mailer.delivery_method = :letter_opener
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.delivery_method = :sendmail
+  config.action_mailer.delivery_method = :letter_opener
+
+
+  config.serve_static_files = false
+  config.serve_static_assets = true
+  config.assets.digest = false
 end

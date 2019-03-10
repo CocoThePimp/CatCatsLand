@@ -8,9 +8,6 @@ gem 'dotenv-rails'
 gem 'devise'
 gem 'stripe'
 
-gem 'mailjet'
-
-gem 'mail'
 
 
 
