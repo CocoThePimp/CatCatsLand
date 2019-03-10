@@ -7,12 +7,6 @@
     <h1>Bonjour  <%= @user %>  ,</h1>
     <h1>Nous vous remercions pour votre commande.</h1><br>
 
-    <%if @item.catpic.attached?%>
-          <%= image_tag attachments[@item.catpic] %>
-          <%else%>
-          <%= image_tag attachments["cat_1.jpg"], alt: "photos de chat" %>
-          <%end%>
-
     <p>Retrouvez vos photos en pièces jointes!</p><br><br><br>
     <p>A bientôt sur Cats-Cats-Land !</p>
   </body>

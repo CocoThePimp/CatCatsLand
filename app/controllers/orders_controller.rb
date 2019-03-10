@@ -16,7 +16,7 @@ class OrdersController < ApplicationController
       currency: 'eur'
     })
       order_user
-      order_send(@order)
+      sendgrid
   end
 
     
@@ -33,11 +33,22 @@ class OrdersController < ApplicationController
     redirect_to profiles_path
     flash[:succeess]= "Merci de votre achat. Vous receverez un mail très prochainement."
   end
-
+=begin
   def order_send(order)
     NotificationMailer.send_order_email(@order,@order.user).deliver_now
     NotificationMailer.send_confirmation_email(@order.items,@order.user).deliver_now
   end
+
+=end
+
+  def sendgrid
+    #--- Mailer User ---
+    NotificationMailer.send_order_email(current_user.email).deliver
+
+    #--- Mailer Admin ---
+    NotificationMailer.send_confirmation_email(current_user.email).deliver
+
+  end 
 
 
 
