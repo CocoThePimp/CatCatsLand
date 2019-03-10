@@ -19,7 +19,7 @@
             </li>
           
             <!-- Admin Account-->
-            <% if current_user && current_user.is_admin === false %>
+            <% if current_user && current_user.is_admin == true %>
             
             <li class="nav-item dropdown-toggle"><a class="nav-link" href="<%=admin_users_path%>"> Espace admin</a>
               <ul class="dropdown-menu">
