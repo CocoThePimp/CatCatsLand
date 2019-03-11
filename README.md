@@ -13,6 +13,7 @@
 
 <h2 align="center"> =^..^=  https://cat-cats-land.herokuapp.com/  =^..^= </h2>
 
+<h2 align="center"> Version prod : https://cat-cats-prod.herokuapp.com/ </h2>
 
 <h1 align="center"> L'équipe THP #TeamStrasbourg </h1>
 
@@ -33,11 +34,5 @@ Notre lead développeur | ... Quand on push sur Heroku | ... Soyez gentil avec n
     <li>Tu peux payer avec stripe</li>
     <li>Tu peux recevoir des mails</li>
     <li>Tu as un backoffice si tu es admin</li>
-  </ul>
-<h3>Ce que tu ne peux pas faire</h3>
-  <ul>
-    <li>Recevoir un mail après le paiement de ta commande</li>
-    <li>Rien d'autre?</li>
-    <li>Non vraiment ça marche!</li>
   </ul>
 
