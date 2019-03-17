@@ -19,8 +19,7 @@
             </li>
           
             <!-- Admin Account-->
-            <% if current_user && current_user.is_admin == true %>
-            
+          <% if current_user && current_user.is_admin == true %>
             <li class="nav-item dropdown-toggle"><a class="nav-link" href="<%=admin_users_path%>"> Espace admin</a>
               <ul class="dropdown-menu">
                 <li class="dropdown-item"><%= link_to "Utilisateurs", admin_users_path%></li>
@@ -28,7 +27,7 @@
                 <li class="dropdown-item"><a href="<%= admin_items_path %>">Produits</a></li>
               </ul>
             </li>
-            <%end%>
+          <%end%>
 
             <% if current_user %>
             <!-- Account-->
@@ -46,7 +45,7 @@
           <ul class="navbar-buttons d-inline-block align-middle mr-lg-2">
               <li class="d-block d-lg-none"><a href="#mobile-menu" data-toggle="offcanvas"><i class="fe-icon-menu"></i></a></li>
               <li> <%= link_to(carts_path, data: {toggle: "offcanvas"}) do %>
-                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-shopping-cart"></i> 
                 <span class="badge badge-danger"></span>
                <% end %>
                <%end%>
