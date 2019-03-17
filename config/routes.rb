@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations' }, path_names: {sign_in: "connexion", sign_out: "déconnexion", edit: "paramètres"}
 
   scope(path_names: { index: 'catalogue_des_produits', show: 'detail', create: 'nouvel_article'}) do
-    resources :items, only: [:index, :show, :create], path: 'catalogue_des_produits'
+    resources :items, only: [:index, :show, :create, :destroy], path: 'catalogue_des_produits'
   end
 
   resources :carts, except: [:show, :new], path: 'panier'

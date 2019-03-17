@@ -26,11 +26,7 @@ class OrdersController < ApplicationController
 
   def order_user
     @object = JoinTableCartItem.where(cart: @cart)
-<<<<<<< HEAD
     @order = Order.create(user: current_user, stripe_customer_id: @customer.id, amount: params[:amount])
-=======
-    @order = Order.create(user: current_user, stripe_customer_id: @customer.id, amount: @amount)
->>>>>>> 8a435b63c04595884cf198c0397b1b89183fa725
     @object.each do |object|
       OrderContent.create(item_id: object.item_id, order_id: @order.id)
       object.destroy
