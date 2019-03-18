@@ -11,7 +11,7 @@
 
 </h1>
 
-<h2 align="center"> =^..^=  https://cat-cats-land.herokuapp.com/  =^..^= </h2>
+
 
 <h2 align="center"> Version prod : https://cat-cats-prod.herokuapp.com/ </h2>
 
